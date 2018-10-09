@@ -1,0 +1,150 @@
+<div class='container'>
+  <div class="panel-body">
+<h2 class="page-header">User Registration</h2>
+        {{#if errors}}
+          {{#each errors}}
+            <div class="alert alert-danger">{{msg}}</div>
+          {{/each}}
+        {{/if}}
+        <hr>
+<form method="post" action="/donors/register">
+<div class="form-group">
+  <label>Fullname</label>
+  <input type="text" class="form-control" placeholder="Fullname" name="fullname">
+</div>
+<div class="form-group">
+   <label>Username</label>
+   <input type="text" class="form-control" placeholder="Username" name="username">
+</div>
+<div class="form-group">
+  <label>Email</label>
+<input type="email" class="form-control" placeholder="Email" name="mail">
+</div>
+  <div class="form-group">
+    <label>Address</label>
+    <input type="text" class="form-control" placeholder="Address" name="address">
+  </div>
+<div class="form-group">
+  <label>Age</label>
+  <input type="number" min=20 max=50 class="form-control" placeholder="Age" name="age">
+</div>
+<div class="form-group">
+  <label>Blood Group</label>
+
+  <select name="bloodgroup">
+    <option value="O">O</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="O-">O-</option>
+    <option value="B-">B-</option>
+    <option value="A-">A-</option>
+    <option value="AB-">AB-</option>
+  </select>
+
+</div>
+<div class="form-group">
+  <label>Date Of Birth</label>
+  <input type="date" class="form-control" placeholder="DateofBirth" name="date">
+</div>
+<div class="form-group">
+  <label>City</label>
+
+  <select name="city">
+    <option value="Akkaraipattu"> Akkaraipattu </option>
+<option value="Ambalangoda"> Ambalangoda </option>
+<option value="Ampara"> Ampara	 </option>
+<option value="Anuradhapura"> Anuradhapura	 </option>
+<option value="Badulla"> Badulla	 </option>
+<option value="Balangoda"> Balangoda	 </option>
+<option value="Bandarawela"> Bandarawela	 </option>
+<option value="Batticaloa"> Batticaloa	 </option>
+<option value="Beruwala"> Beruwala	 </option>
+<option value="Boralesgamuwa"> Boralesgamuwa	 </option>
+<option value="Chavakachcheri"> Chavakachcheri	 </option>
+<option value="Chilaw"> Chilaw		 </option>
+<option value="Colombo"> Colombo		 </option>
+<option value="Dambulla"> Dambulla	 </option>
+<option value="Dehiwala-Mount Lavinia"> Dehiwala-Mount Lavinia	 </option>
+<option value="Embilipitiya"> Embilipitiya	 </option>
+<option value="Eravur"> Eravur		 </option>
+<option value="Galle"> Galle		 </option>
+<option value="Gampaha"> Gampaha		 </option>
+<option value="Gampola"> Gampola		 </option>
+<option value="Hambantota"> Hambantota	</option>
+<option value="Haputale"> Haputale	 </option>
+<option value="Hatton-Dickoya"> Hatton-Dickoya	 </option>
+<option value="Hikkaduwa"> Hikkaduwa	 </option>
+<option value="Horana"> Horana		 </option>
+<option value="Ja-Ela"> Ja-Ela		 </option>
+<option value="Jaffna"> Jaffna		 </option>
+<option value="Kadugannawa"> Kadugannawa	 </option>
+<option value="Kaduwela"> Kaduwela 	 </option>
+<option value="Kalmunai"> Kalmunai  </option>
+<option value="Kalutara"> Kalutara	 </option>
+<option value="Kandy"> Kandy		</option>
+<option value="Kattankudy"> Kattankudy  </option>
+<option value="Katunayake"> Katunayake  </option>
+<option value="Kegalle"> Kegalle	 </option>
+<option value="Kesbewa"> Kesbewa	 </option>
+<option value="Kilinochchi"> Kilinochchi	 	 </option>
+<option value="Kinniya"> Kinniya	 </option>
+<option value="Kolonnawa"> Kolonnawa	 </option>
+<option value="Kuliyapitiya"> Kuliyapitiya	</option>
+<option value="Kurunegala"> Kurunegala	 </option>
+<option value="Maharagama"> Maharagama	 </option>
+<option value="Mannar"> Mannar		 </option>
+<option value="Matale"> Matale		 </option>
+<option value="Matara"> Matara		 </option>
+<option value="Minuwangoda"> Minuwangoda	 </option>
+<option value="Moneragala"> Moneragala	 </option>
+<option value="Moratuwa"> Moratuwa	 </option>
+<option value="Mullaitivu"> Mullaitivu	</option>
+<option value="Nawalapitiya"> Nawalapitiya	 </option>
+<option value="Negombo"> Negombo		 </option>
+<option value="Nuwara Eliya"> Nuwara Eliya	 </option>
+<option value="Panadura"> Panadura	 </option>
+<option value="Peliyagoda"> Peliyagoda	 </option>
+<option value="Point Pedro"> Point Pedro	 </option>
+<option value="Polonnaruwa"> Polonnaruwa	 </option>
+<option value="Puttalam"> Puttalam	 </option>
+<option value="Ratnapura"> Ratnapura	</option>
+<option value="Seethawakapura"> Seethawakapura  </option>
+<option value="Sri Jayawardenepura"> Sri Jayawardenepura  </option>
+<option value="Tangalle"> Tangalle	 </option>
+<option value="Thalawakele-Lindula"> Thalawakele-Lindula	 </option>
+<option value="Trincomalee"> Trincomalee	 </option>
+<option value="Valvettithurai"> Valvettithurai	 </option>
+<option value="Vavuniya"> Vavuniya	 </option>
+<option value="Wattala-Mabole"> Wattala-Mabole	 </option>
+<option value="Wattegama"> Wattegama	</option>
+<option value="Weligama"> Weligama </option>
+  </select>
+
+</div>
+<div class="form-group">
+  <label>PhoneNumber</label>
+  <input type="number" class="form-control" placeholder="PhoneNumber" name="phonenumber">
+</div>
+<div class="form-group">
+  <label>Password</label>
+  <input type="password" class="form-control" placeholder="Password" name="password">
+</div>
+<div class="form-group">
+  <label>Confirm Password</label>
+  <input type="password" class="form-control" placeholder="ConfirmPassword" name="password2">
+</div>
+<div class="form-group">
+  <label>Disease</label>
+  <input type="text" class="form-control" placeholder="Diseas" name="diseas">
+</div>
+<div class="form-group">
+  <label>Alcohol Consumer</label><br>
+  <input type="checkbox" name="alc" value="true"> yes<br>
+  <input type="checkbox" name="alc" value="false"> no<br>
+</div>
+<button type="submit" class="btn btn-default register">Submit</button>
+</form>
+</div>
+</div>
+<br />
+<br />
